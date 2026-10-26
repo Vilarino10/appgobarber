@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
-import { Touchable } from "react-native-gesture-handler";
+import { TouchableOpacity } from "react-native";
 
-export const Container = styled(Touchable)`
+export const Container = styled(TouchableOpacity)`
   width: 100%;
   height: 60px;
   background: #ff9000;

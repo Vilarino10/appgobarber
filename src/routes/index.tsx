@@ -4,7 +4,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 
-const Auth = createNativeStackNavigator();
+export type AuthStackParamList = {
+  SignIn: undefined;
+  SignUp: undefined;
+};
+
+const Auth = createNativeStackNavigator<AuthStackParamList>();
 
 const AuthRoutes: React.FC = () => (
   <Auth.Navigator

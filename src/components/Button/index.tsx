@@ -1,9 +1,9 @@
 import React, { PropsWithChildren } from "react";
-import { Touchable, TouchableProps } from "react-native-gesture-handler";
+import { TouchableOpacityProps } from "react-native";
 
 import { Container, ButtonText } from "./styles";
 
-interface ButtonProps extends TouchableProps, PropsWithChildren {}
+interface ButtonProps extends TouchableOpacityProps {}
 
 const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
   <Container {...rest}>
