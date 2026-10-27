@@ -2,6 +2,8 @@ import React from "react";
 import { View, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
+import AppProvider from "./hooks";
+
 import {
   SafeAreaInsetsContext,
   SafeAreaProvider,
@@ -13,9 +15,11 @@ const App: React.FC = () => (
   <SafeAreaProvider>
     <NavigationContainer>
       <StatusBar barStyle="light-content" />
-      <View style={{ flex: 1, backgroundColor: "#312e38" }}>
-        <Routes />
-      </View>
+      <AppProvider>
+        <View style={{ flex: 1, backgroundColor: "#312e38" }}>
+          <Routes />
+        </View>
+      </AppProvider>
     </NavigationContainer>
   </SafeAreaProvider>
 );
