@@ -8,7 +8,8 @@ export interface SignInCredentials {
 export interface AuthContextData {
   user: object;
   signIn(data: { email: string; password: string }): Promise<void>;
-  signOut(): void;
+  signOut(): Promise<void>;
+  loading: boolean;
 }
 
 export const AuthContext = createContext<AuthContextData>(

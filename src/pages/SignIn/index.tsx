@@ -18,7 +18,7 @@ import useAuth from "../../hooks/auth";
 import getValidationErros from "../../utils/getValidationErrors";
 
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import type { AuthStackParamList } from "../../routes";
+import type { AuthStackParamList } from "../../routes/auth.routes";
 
 import * as Yup from "yup";
 
